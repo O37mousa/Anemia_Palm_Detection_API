@@ -34,7 +34,6 @@ ARTIFACTS_FOLDER_PATH = os.path.join(BASE_DIR, "artifacts")
 MODEL_FILENAME = "random_forest_classifier_palm.pkl"
 rf_model_path = os.path.join(ARTIFACTS_FOLDER_PATH, MODEL_FILENAME)
 
-
 # Global variable for the model
 model = None
 
@@ -171,4 +170,4 @@ async def detect_rf(image: UploadFile = File(...)):
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="127.0.0.1", port=8001, reload=True)
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
